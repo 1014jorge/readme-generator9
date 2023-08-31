@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+//  a function that returns a license badge, link, and info,  based on which license is passed in
 const licenses = {
   'Apache': {
     badge: '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
@@ -157,6 +157,7 @@ limitations under the License.`
     This Agreement is governed by the laws of the State of New York and the intellectual property laws of the United States of America. No party to this Agreement will bring a legal action under this Agreement more than one year after the cause of action arose. Each party waives its rights to a jury trial in any resulting litigation.`
   }
 }
+//function to generate license details and pass in to the markdown 
 function generateLicense(answers) {
   let license = answers.license;
   if (licenses[license]) {
@@ -165,7 +166,7 @@ function generateLicense(answers) {
     licenseInfo = licenses[license].info;
   } return licenseBadge, licenseLink, licenseInfo;
 }
-// TODO: Create a function to generate markdown for README
+//  a function to generate markdown for README including table of contents, working links
 function generateMarkdown(answers) {
   generateLicense(answers)
   return `# ${answers.name} ${licenseBadge}
