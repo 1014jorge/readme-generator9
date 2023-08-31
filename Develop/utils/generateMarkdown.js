@@ -36,9 +36,9 @@ function generateLicense(answers) {
   let license = answers.license;
   if (licenses[license]) {
     licenseBadge = licenses[license].badge;
-    lincenseLink = licenses[license].link;
-    lincenseInfo = licenses[license].info;
-  } return licenseBadge, lincenseLink, lincenseInfo;
+    licenseLink = licenses[license].link;
+    licenseInfo = licenses[license].info;
+  } return licenseBadge, licenseLink, licenseInfo;
 }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
@@ -46,9 +46,30 @@ function generateMarkdown(answers) {
   return `# ${answers.name} ${licenseBadge}
 
   ## Description
-  
 
+  ${answers.description}
+## Table of Contents 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
+## Installation 
+${answers.installation}
+
+## Usage
+
+${answers.usage}
+
+## Credits
+${answers.credits}
+
+GitHub Username:  ${answers.github}
+
+## License 
+
+${licenseInfo}
+${licenseLink}
   `;
 }
 

@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 // const path = require('path');
 const generateMarkdown = require('./utils/generateMarkdown');
-const { default: Choices } = require('inquirer/lib/objects/choices');
+const { default: choices } = require('inquirer/lib/objects/choices');
 
 
 // TODO: Create an array of questions for user input
@@ -36,16 +36,25 @@ inquirer.prompt([{
     message: 'Which license did you use for this project?',
     choices: ['Apache', 'MIT', 'Boost', 'GNU', 'Eclipse'],
 },
-
 {
     type: 'input',
-    name: 'motivation',
-    message: 'What was your motivation?',
+    name: 'installation',
+    message: 'What are the step required to install your application?',
 },
 {
     type: 'input',
-    name: 'build',
-    message: 'Why did you build this project?',
+    name: 'usage',
+    message: 'Who should use this application?',
+},
+{
+    type: 'input',
+    name: 'credits',
+    message: 'Who created this application? ',
+},
+{
+    type: 'input',
+    name: 'github',
+    message: 'Please provide GitHub username.',
 },
 {
     type: 'input',
