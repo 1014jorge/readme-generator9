@@ -1,4 +1,4 @@
-# readme generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Professional Readme generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
  
 ## Table of Contents 
@@ -11,25 +11,25 @@
 
 ## Description
 
-this application will ask you standard questions to generater a new readme file
-The purpose of this application is to make it easy for anyone to create a simple yet effective readme file
+This application asks questions to create a readme file
+The purpose of this application is to create and easy yet effective readme file
 
 ## Installation 
-I used javascript to create this application.
+I used javascript and markdown to create this application.
 
-npm instal;ler 
+npm nodejs inquirer@8.2.4
 
 
 
 ## Usage
 
- This application should be used by anyone whow wangs to create a readme fiel
+ This application should be used by anyone who needs a fast and easy way to create a readme file for their project
 
 ## Credits
 
-Created by: jorge
+Created by: Jorge
 
-Contributions by: my calss mate
+Contributions by: My classmate Rob A
 
 ## License 
 This project is licensed under the terms of the
@@ -50,11 +50,11 @@ Link: https://opensource.org/licenses/MIT
 ## Questions
 If you have any questions regarding this application here are my contact details:
 
-GitHub:  jorge
+GitHub:  1014jorge
 
-GitHub Link: jorge.com
+GitHub Link: github.com/1014jorge
 
-email: jorge@jorge.com
+email: jorge.1014@gmail.com
 
 
   

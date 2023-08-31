@@ -71,11 +71,7 @@ inquirer.prompt([{
     name: 'email',
     message: 'Please provide email address.',
 },
-// {
-//     type: 'input',
-//     name: 'standOut',
-//     message: 'What makes your project stand out?',
-// }
+
 ]).then((answers) => {
     console.log(answers);
     fs.writeFile('newREADME.md', generateMarkdown(answers), (err) =>
