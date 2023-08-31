@@ -11,17 +11,17 @@ const { default: choices } = require('inquirer/lib/objects/choices');
 inquirer.prompt([{
     type: 'input',
     name: 'name',
-    message: 'What is the name of your project?',
+    message: 'What is the name of your application?',
 },
 {
     type: 'input',
     name: 'description',
-    message: 'Please provide a description of your project.',
+    message: 'Please provide a description of your application.',
 },
 {
     type: 'input',
     name: 'purpose',
-    message: 'What is the purpose of this project?',
+    message: 'What is the purpose of this application?',
 
 },
 {
@@ -34,12 +34,12 @@ inquirer.prompt([{
     type: 'list',
     name: 'license',
     message: 'Which license did you use for this project?',
-    choices: ['Apache', 'MIT', 'Boost', 'GNU', 'Eclipse'],
+    choices: ['Apache', 'MIT', 'Boost', 'ISC', 'Eclipse',],
 },
 {
     type: 'input',
     name: 'installation',
-    message: 'What are the step required to install your application?',
+    message: 'What is required to install your application?',
 },
 {
     type: 'input',
@@ -53,24 +53,29 @@ inquirer.prompt([{
 },
 {
     type: 'input',
+    name: 'contributors',
+    message: 'Any contributors? If so list them here.'
+},
+{
+    type: 'input',
     name: 'github',
     message: 'Please provide GitHub username.',
 },
 {
     type: 'input',
-    name: 'problem',
-    message: 'What problem does it solve?',
+    name: 'githubLink',
+    message: 'Please provide the link to your GitHub.',
 },
 {
     type: 'input',
-    name: 'learn',
-    message: 'What did you learn?',
+    name: 'email',
+    message: 'Please provide email address.',
 },
-{
-    type: 'input',
-    name: 'standOut',
-    message: 'What makes your project stand out?',
-}
+// {
+//     type: 'input',
+//     name: 'standOut',
+//     message: 'What makes your project stand out?',
+// }
 ]).then((answers) => {
     console.log(answers);
     fs.writeFile('newREADME.md', generateMarkdown(answers), (err) =>
